@@ -17,6 +17,6 @@ public interface ProductDAO {
     @UseRowMapper(ProductMbapper.class)
     Product getProduct(int id_product);
 
-    @SqlUpdate("INSERT INTO productos ( name, stock, price) VALUES (?, ?, ?)")
-    void addProduct (String name, int stock, int price);
+    @SqlUpdate("INSERT INTO productos (name, price, stock) VALUES (?, ?, ?)")
+    void addProduct (String name, int price, int stock);
 }

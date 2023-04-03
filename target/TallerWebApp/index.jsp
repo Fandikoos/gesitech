@@ -7,6 +7,17 @@
 <%@include file="includes/header.jsp"%>
 
 <main>
+    <div class="d-flex gap-2 justify-content-center py-5">
+      <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+         <a href="register-product.jsp" class="btn btn-info my-2">Registrar nuevo producto</a>
+      </button>
+      <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+         <a href="register-product.jsp" class="btn btn-info my-2">Registrar nuevo pedido</a>
+      </button>
+    </div>
+
+    <div class="b-example-divider"></div>
+
     <div class="grid">
         <%
             Class.forName("com.mysql.cj.jdbc.Driver");
