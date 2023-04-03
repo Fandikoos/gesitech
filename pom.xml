@@ -7,6 +7,7 @@
     <groupId>com.svalero</groupId>
     <artifactId>gesItech</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -75,7 +76,7 @@
                     <configuration>
                         <url>http://localhost:8080/manager/text</url>
                         <server>tomcat18</server>
-                        <path>/taller</path>
+                        <path>/itech</path>
                         <username>tomcat</username>
                         <password>tomcat</password>
                     </configuration>

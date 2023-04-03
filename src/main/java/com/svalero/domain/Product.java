@@ -9,12 +9,13 @@ import lombok.*;
 @ToString
 public class Product {
 
-    private int ID_PRODUCTO;
+
+    private int id_product;
     @NonNull
-    private String NOMBRE;
+    private String name;
     @NonNull
-    private int STOCK;
+    private int stock;
     @NonNull
-    private int PRECIO;
+    private int price;
 
 }

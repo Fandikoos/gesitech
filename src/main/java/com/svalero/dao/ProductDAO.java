@@ -9,10 +9,14 @@ import java.util.List;
 
 public interface ProductDAO {
 
-    @SqlQuery("SELECT * FROM PRODUCTOS")
+    @SqlQuery("SELECT * FROM productos")
     @UseRowMapper(ProductMbapper.class)
     List<Product> getProducts();
 
-    @SqlUpdate("INSERT INTO productos (ID_PRODUCTO, NOMBRE, STOCK, PRECIO) VALUES (?, ?, ?, ?)")
-    void addProduct (int ID_PRODUCTO, String NOMBRE, int STOCK, int PRECIO);
+    @SqlQuery("SELECT * FROM productos WHERE id_product = ?")
+    @UseRowMapper(ProductMbapper.class)
+    Product getProduct(int id_product);
+
+    @SqlUpdate("INSERT INTO productos ( name, stock, price) VALUES (?, ?, ?)")
+    void addProduct (String name, int stock, int price);
 }

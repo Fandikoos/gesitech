@@ -9,6 +9,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3CMD29nX955F_6kWJWmMixA3y2NFrTSiZUg&usqp=CAU" type="image/x-icon">
+
 
     <style>
       .bd-placeholder-img {
@@ -95,7 +97,7 @@
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <a href="http://127.0.0.1:5500/index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <img src="img/logo-favicon-1.png" alt="logo_empresa" width="40" height="32" class="bi me-2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3CMD29nX955F_6kWJWmMixA3y2NFrTSiZUg&usqp=CAU" alt="logo_empresa" width="40" height="32" class="bi me-2">
         <span class="fs-4">Gesitech App</span>
       </a>
 
