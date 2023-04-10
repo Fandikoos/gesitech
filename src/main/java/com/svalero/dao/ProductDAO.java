@@ -13,10 +13,19 @@ public interface ProductDAO {
     @UseRowMapper(ProductMbapper.class)
     List<Product> getProducts();
 
-    @SqlQuery("SELECT * FROM productos WHERE id_product = ?")
+    @SqlQuery("SELECT * FROM productos WHERE id = ?")
     @UseRowMapper(ProductMbapper.class)
-    Product getProduct(int id_product);
+    Product getProduct(int id);
 
-    @SqlUpdate("INSERT INTO productos (name, price, stock) VALUES (?, ?, ?)")
-    void addProduct (String name, int price, int stock);
+    @SqlUpdate("INSERT INTO productos (name, price, stock, image) VALUES (?, ?, ?, ?)")
+    void addProduct (String name, int price, int stock, String image);
+
+    @SqlUpdate("DELETE FROM productos WHERE id = ?")
+    void removeProduct(int id_product);
+
+    @SqlUpdate("UPDATE productos SET name = ?, price = ?, stock = ?, image = ? WHERE id = ?")
+    void editProduct(String name, int price, int stock, String image, int id);
+
+    @SqlUpdate("UPDATE productos SET name = ?, price = ?, stock = ? WHERE id = ?")
+    void editProduct(String name, int price, int stock);
 }

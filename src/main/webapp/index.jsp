@@ -1,44 +1,53 @@
-
 <%@ page import="com.svalero.dao.Database"%>
 <%@ page import="com.svalero.dao.ProductDAO"%>
 <%@ page import="com.svalero.domain.Product"%>
-<%@ page import="java.util.List"%>
+<%@ page import="java.util.List" %>
 
 <%@include file="includes/header.jsp"%>
+
+    <style>
+        .grid{
+              display: grid;
+              grid-template-columns: auto auto auto;
+              justify-content: space-around;
+              align-content: space-around;
+              }
+    </style>
 
 <main>
     <div class="d-flex gap-2 justify-content-center py-5">
       <button class="btn btn-primary d-inline-flex align-items-center" type="button">
-         <a href="register-product.jsp" class="btn btn-info my-2">Registrar nuevo producto</a>
+         <a href="product-form.jsp?action=register" class="btn btn-info my-2">Registrar nuevo producto</a>
       </button>
       <button class="btn btn-primary d-inline-flex align-items-center" type="button">
-         <a href="register-product.jsp" class="btn btn-info my-2">Registrar nuevo pedido</a>
+         <a href="register-order.jsp" class="btn btn-info my-2">Registrar nuevo pedido</a>
       </button>
     </div>
 
-    <div class="b-example-divider"></div>
 
-    <div class="grid">
-        <%
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Database.connect();
-            List<Product> productList = Database.jdbi.withExtension(ProductDAO.class, ProductDAO::getProducts);
-            for (Product product : productList) {
-        %>
-            <div class="card" style="width: 18rem;">
-                <img src="https://res.cloudinary.com/grover/image/upload/f_webp,q_auto/b_white,c_pad,dpr_2.0,h_500,w_520/f_auto,q_auto/v1632241420/tcv0cs8qg7mkzuerdljr.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Producto: <%= product.getName()%> </h5>
-                <p class="card-text">Stock de producto: <%= product.getStock()%></p>
+    <div class="grid" style="display: grid; grid-template-columns: auto auto auto; justify-content: space-around; align-content: space-around;">
+            <%
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Database.connect();
+                List<Product> productList = Database.jdbi.withExtension(ProductDAO.class, ProductDAO::getProducts);
+                for (Product product : productList) {
+            %>
+                <div class="card" style="width: 18rem;">
+                    <img src="../itech_data/<%= product.getImage() %>" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title">Producto: <%= product.getName()%> </h5>
+                        <p class="card-text">Stock de producto: <%= product.getStock()%> uds.</p>
+                        <p class="card-text">Precio unitario: <%= product.getPrice()%> $</p>
+
+                    </div>
+                    <div class="card-body">
+                    <a href="view-details.jsp?id=<%= product.getId() %>" class="card-link">Ver detalles</a>
+                    <a href="product-form.jsp?id=<%= product.getId() %>&action=edit&name=<%= product.getName() %>&price=<%= product.getPrice() %>&stock=<%= product.getStock() %>" class="card-link">Editar producto</a>
+                    </div>
                 </div>
-                <div class="card-body">
-                <a href="view-details.jsp?id_product=<%= product.getId_product() %>" class="card-link">View more details</a>
-                <a href="edit-vehicle.jsp?id_product=<%= product.getId_product() %>" class="card-link">Edit product</a>
-                </div>
-            </div>
-        <%
-            }
-        %>
+            <%
+                }
+            %>
     </div>
 </main>
 
