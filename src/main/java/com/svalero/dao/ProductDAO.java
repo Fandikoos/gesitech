@@ -26,6 +26,4 @@ public interface ProductDAO {
     @SqlUpdate("UPDATE productos SET name = ?, price = ?, stock = ?, image = ? WHERE id = ?")
     void editProduct(String name, int price, int stock, String image, int id);
 
-    @SqlUpdate("UPDATE productos SET name = ?, price = ?, stock = ? WHERE id = ?")
-    void editProduct(String name, int price, int stock);
 }

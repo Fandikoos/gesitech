@@ -32,7 +32,7 @@
                 List<Product> productList = Database.jdbi.withExtension(ProductDAO.class, ProductDAO::getProducts);
                 for (Product product : productList) {
             %>
-                <div class="card" style="width: 18rem; margin: 20px;">
+                <div class="card" style="width: 20rem; margin: 20px;">
                     <img src="../itech_data/<%= product.getImage() %>" class="card-img-top" >
                     <div class="card-body">
                         <h5 class="card-title">Producto: <%= product.getName()%> </h5>
@@ -43,6 +43,7 @@
                     <div class="card-body" style="display: flex; justify-content: space-evenly;">
                     <a href="view-details.jsp?id=<%= product.getId() %>" class="card-link"><button type="button" class="btn btn-info">Ver detalles</button></a>
                     <a href="product-form.jsp?id=<%= product.getId() %>&action=edit&name=<%= product.getName() %>&price=<%= product.getPrice() %>&stock=<%= product.getStock() %>" class="card-link"><button type="button" class="btn btn-primary">Editar producto</button></a>
+                    <a href="remove-product?id=<%= product.getId() %>" class="card-link"><button type="button" class="btn btn-danger">Eliminar producto</button></a>
                     </div>
                 </div>
             <%

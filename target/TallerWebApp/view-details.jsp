@@ -21,8 +21,8 @@
             <p class="card-text">Aquí tienes mas detalles sobre el producto: <b> <%= product.getName() %></b></p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><b> Precio: </b><%= product.getPrice() %></li>
-            <li class="list-group-item"><b> Stock: </b><%= product.getStock() %></li>
+            <li class="list-group-item"><b> Precio: </b><%= product.getPrice() %> $</li>
+            <li class="list-group-item"><b> Stock: </b><%= product.getStock() %> unidades</li>
             <li class="list-group-item"><b> Id del producto: </b><%= product.getId() %></li>
           </ul>
           <div class="card-body">

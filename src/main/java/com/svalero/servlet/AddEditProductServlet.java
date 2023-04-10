@@ -67,7 +67,7 @@ public class AddEditProductServlet extends HttpServlet {
                 });
             }
 
-            response.sendRedirect("http://localhost:8080/itech/");
+            response.sendRedirect("index.jsp");
 
             out.println("<div class='alert alert-success' role='alert'>Producto registrado correctamente</div>");
         }catch (ClassNotFoundException cnfe){
