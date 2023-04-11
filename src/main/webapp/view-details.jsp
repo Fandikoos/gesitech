@@ -26,8 +26,11 @@
             <li class="list-group-item"><b> Stock: </b><%= product.getStock() %> unidades</li>
             <li class="list-group-item"><b> Id del producto: </b><%= product.getId() %></li>
           </ul>
-          <div class="card-body">
-            <a href="index.jsp" class="card-link"><b>Index</b></a>
+          <div class="card-body" style="text-align: center;">
+            <a href="index.jsp" class="card-link" style="text-decoration: none; color: darkmagenta;"><b>Index de productos</b></a>
+          </div>
+          <div class="card-body" style="text-align: center;">
+            <a href="index-customers.jsp" class="card-link" style="text-decoration: none; color: darkmagenta;"><b>Index de clientes</b></a>
           </div>
       </div>
     </div>
