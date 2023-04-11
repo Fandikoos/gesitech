@@ -1,6 +1,7 @@
 <%@ page import="com.svalero.dao.Database" %>
 <%@ page import="com.svalero.dao.ProductDAO" %>
 <%@ page import="com.svalero.domain.Product" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ include file="includes/header.jsp" %>
 

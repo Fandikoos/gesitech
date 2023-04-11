@@ -13,9 +13,11 @@ public class Product {
     @NonNull
     private String name;
     @NonNull
+    private int price;
+    @NonNull
     private int stock;
     @NonNull
-    private int price;
     private String image;
+
 
 }

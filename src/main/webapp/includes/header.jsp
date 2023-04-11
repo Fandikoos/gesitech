@@ -97,13 +97,13 @@
 
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="http://localhost:8080/itech/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <a href="index.jsp" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3CMD29nX955F_6kWJWmMixA3y2NFrTSiZUg&usqp=CAU" alt="logo_empresa" width="40" height="32" class="bi me-2">
         <span class="fs-4">Gesitech App</span>
       </a>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="index.jsp" class="nav-link active" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Sobre nosotros</a></li>
         <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
       </ul>

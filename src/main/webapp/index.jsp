@@ -21,10 +21,10 @@
          <a href="product-form.jsp?action=register" class="btn btn-info my-2">Registrar nuevo producto</a>
       </button>
       <button class="btn btn-primary d-inline-flex align-items-center" type="button">
-         <a href="order-form.jsp?action=register" class="btn btn-info my-2">Registrar nuevo pedido</a>
+         <a href="customer-form.jsp?action=register" class="btn btn-info my-2">Registrar nuevo cliente</a>
       </button>
       <button class="btn btn-primary d-inline-flex align-items-center" type="button">
-         <a href="index-order.jsp" class="btn btn-info my-2">Ver todos los pedidos</a>
+         <a href="index-customers.jsp" class="btn btn-info my-2">Ver todos los clientes</a>
       </button>
     </div>
 

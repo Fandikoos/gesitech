@@ -13,8 +13,8 @@ public class ProductMbapper implements RowMapper<Product> {
     public Product map(ResultSet rs, StatementContext ctx) throws SQLException{
         return new Product(rs.getInt("id"),
                 rs.getString("name"),
-                rs.getInt("stock"),
                 rs.getInt("price"),
+                rs.getInt("stock"),
                 rs.getString("image"));
     }
 }
