@@ -2,6 +2,7 @@
 <%@ page import="com.svalero.dao.ProductDAO"%>
 <%@ page import="com.svalero.domain.Product"%>
 <%@ page import="java.util.List" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@include file="includes/header.jsp"%>
 
@@ -20,7 +21,10 @@
          <a href="product-form.jsp?action=register" class="btn btn-info my-2">Registrar nuevo producto</a>
       </button>
       <button class="btn btn-primary d-inline-flex align-items-center" type="button">
-         <a href="register-order.jsp" class="btn btn-info my-2">Registrar nuevo pedido</a>
+         <a href="order-form.jsp?action=register" class="btn btn-info my-2">Registrar nuevo pedido</a>
+      </button>
+      <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+         <a href="index-order.jsp" class="btn btn-info my-2">Ver todos los pedidos</a>
       </button>
     </div>
 

@@ -1,5 +1,6 @@
 <%@include file = "includes/header.jsp"%>
 
+
 <!--<script type="text/javascript">
     $(document).ready(function() {
         $("form").on("submit", function(event) {

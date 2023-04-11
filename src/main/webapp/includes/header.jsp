@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head><script src="/docs/5.3/assets/js/color-modes.js"></script>

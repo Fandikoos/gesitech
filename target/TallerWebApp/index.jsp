@@ -2,6 +2,7 @@
 <%@ page import="com.svalero.dao.ProductDAO"%>
 <%@ page import="com.svalero.domain.Product"%>
 <%@ page import="java.util.List" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@include file="includes/header.jsp"%>
 
