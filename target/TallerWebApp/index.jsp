@@ -26,8 +26,8 @@
       <button class="btn btn-primary d-inline-flex align-items-center" type="button">
          <a href="index-customers.jsp" class="btn btn-info my-2">Ver todos los clientes</a>
       </button>
-    </div>
 
+    </div>
 
     <div class="grid" style="display: grid; grid-template-columns: auto auto auto; justify-content: space-around; align-content: space-around;">
             <%
@@ -53,7 +53,9 @@
             <%
                 }
             %>
+
     </div>
+
 </main>
 
 <%@include file="includes/footer.jsp"%>
