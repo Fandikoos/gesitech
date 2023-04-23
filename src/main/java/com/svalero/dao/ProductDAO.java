@@ -26,8 +26,8 @@ public interface ProductDAO {
     @SqlUpdate("UPDATE productos SET name = ?, price = ?, stock = ?, image = ? WHERE id = ?")
     void editProduct(String name, int price, int stock, String image, int id);
 
-    @SqlQuery("SELECT * FROM productos WHERE name = ?")
+    @SqlQuery("SELECT * FROM productos WHERE name = ? AND price = ?")
     @UseRowMapper(ProductMbapper.class)
-    List<Product> getFilterProducts(String name);
+    List<Product> getFilterProducts(String name, int price);
 
 }

@@ -26,6 +26,9 @@
       <button class="btn btn-primary d-inline-flex align-items-center" type="button">
          <a href="index-customers.jsp" class="btn btn-info my-2">Ver todos los clientes</a>
       </button>
+      <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+         <a href="search-form-product.jsp" class="btn btn-info my-2">Buscar productos</a>
+      </button>
 
     </div>
 

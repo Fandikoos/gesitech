@@ -34,22 +34,25 @@ public class SearchCustomerServlet extends HttpServlet {
                 return dao.getFilterCustomers(name, surname);
             });
 
+            out.println("<div class='grid' style='display: grid; grid-template-columns: auto auto auto; justify-content: space-around; align-content: space-around;'>");
             for (Customer customer : searchCustomer){
-                out.println("<link href=/docs/5.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp crossorigin=anonymous>");
-                out.println("<div class='card' style='width: 20rem; margin: 20px; padding: 10px;>");
-                    out.println("<div class='card-body'>");
-                        out.println("<h5 class='card-title'>Nombre: " + customer.getName() + "</h5>");
-                        out.println("<h5 class='card-title'>Apellido: " + customer.getSurname() + "</h5>");
-                        out.println("<p class='card-text'>Teléfono:" + customer.getPhone() + "</p>");
-                        out.println("<p class='card-text'>Dirección:" + customer.getAddress() + "</p>");
+                    out.println("<div class='card' style='width: 20rem; margin: 20px; padding: 10px;>");
 
-                        out.println("<div class='card-body' style='display: flex; justify-content: space-evenly;'>");
-                        out.println("<a href=customer-form.jsp?id_customer=" + customer.getId_customer() + "&action=edit&name=" + customer.getName() + "&surname=" + customer.getSurname() + "&address=" + customer.getAddress() + "&phone=" + customer.getPhone() + " class='card-link'><button type='button' class='btn btn-primary'>Editar cliente</button></a>");
-                        out.println("<a href=view-details-customers.jsp?id_customer=" + customer.getId_customer() + " class='card-link'><button type='button' class='btn btn-info'>Ver detalles</button></a>");
-                        out.println("<a href=remove-customer?id_customer=" + customer.getId_customer() + " class='card-link'><button type='button' class='btn btn-danger'>Eliminar cliente</button></a>");
+                            out.println("<div class='card-body'>");
+                            out.println("<h5 class='card-title'>" + customer.getName() + "</h5>");
+                            out.println("<h5 class='card-title'>" + customer.getSurname() + "</h5>");
+                            out.println("<p class='card-text'>Teléfono: " + customer.getPhone() + "</p>");
+                            out.println("<p class='card-text'>Dirección: " + customer.getAddress() + "</p>");
+
+                            out.println("<div class='card-body' style='display: flex; justify-content: space-evenly;'>");
+                            out.println("<a href=view-details-customers.jsp?id_customer=" + customer.getId_customer() + " class='card-link'><button type='button' class='btn btn-info'>Ver detalles</button></a>");
+                            out.println("<a href=customer-form.jsp?id_customer=" + customer.getId_customer() + "&action=edit&name=" + customer.getName() + "&surname=" + customer.getSurname() + "&address=" + customer.getAddress() + "&phone=" + customer.getPhone() + " class='card-link'><button type='button' class='btn btn-primary'>Editar cliente</button></a>");
+                            out.println("<a href=remove-customer?id_customer=" + customer.getId_customer() + " class='card-link'><button type='button' class='btn btn-danger'>Eliminar cliente</button></a>");
+                            out.println("</div>");
+
                     out.println("</div>");
-                out.println("</div>");
             }
+            out.println("</div>");
 
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();

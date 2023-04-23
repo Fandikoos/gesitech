@@ -24,7 +24,7 @@
 
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="index-customers.jsp">Inicio</a></li>
         <li class="breadcrumb-item active" aria-current="page">Buscar cliente</li>
       </ol>
     </nav>
