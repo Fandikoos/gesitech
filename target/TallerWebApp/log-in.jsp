@@ -67,7 +67,7 @@
         String password = request.getParameter("password");
         if(user.equals("gesitech") && password.equals("gesitech1234")) {
           // Si los datos son correctos, redirigimos al usuario a la página de inicio
-          response.sendRedirect("profile.jsp");
+          response.sendRedirect("index.jsp");
         } else {
           // Si los datos son incorrectos, mostramos una alerta
           %><script>alert("Datos incorrectos");</script><%

@@ -1,18 +1,6 @@
 <%@include file = "includes/header.jsp"%>
 
 
-<!--<script type="text/javascript">
-    $(document).ready(function() {
-        $("form").on("submit", function(event) {
-            event.preventDefault();
-            var formValue = $(this).serialize();
-            $.post("add-product", formValue, function(data) {
-                $("#result").html(data);
-            });
-        });
-    });
-</script>-->
-
 <%
     String action = request.getParameter("action");
     String name = request.getParameter("name");

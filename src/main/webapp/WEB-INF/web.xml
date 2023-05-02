@@ -1,9 +1,14 @@
 <web-app>
     <display-name>GesItech App</display-name>
 
+    <welcome-file-list>
+        <welcome-file>log-in.jsp</welcome-file>
+    </welcome-file-list>
+
     <context-param>
         <description>Ruta donde guardar las imagenes</description>
         <param-name>image-path</param-name>
         <param-value>C:\Users\danfa\Desktop\apache-tomcat-10.1.7\webapps\itech_data</param-value>
     </context-param>
+
 </web-app>

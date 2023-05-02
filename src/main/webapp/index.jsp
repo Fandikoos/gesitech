@@ -50,13 +50,20 @@
                     <div class="card-body" style="display: flex; justify-content: space-evenly;">
                     <a href="view-details.jsp?id=<%= product.getId() %>" class="card-link"><button type="button" class="btn btn-info">Ver detalles</button></a>
                     <a href="product-form.jsp?id=<%= product.getId() %>&action=edit&name=<%= product.getName() %>&price=<%= product.getPrice() %>&stock=<%= product.getStock() %>" class="card-link"><button type="button" class="btn btn-primary">Editar producto</button></a>
-                    <a href="remove-product?id=<%= product.getId() %>" class="card-link"><button type="button" class="btn btn-danger">Eliminar producto</button></a>
+                    <a href="remove-product?id=<%= product.getId() %>" class="card-link"><button type="button" class="btn btn-danger" onclick="confirmRemove(${id})">Eliminar producto</button></a>
                     </div>
                 </div>
             <%
                 }
             %>
 
+        <script type="text/javascript">
+                function confirmRemove(id) {
+                    if(confirm("¿Estás seguro de que desea borrar este producto?")) {
+                        window.location.href = "remove-product?id=" + id;
+                    }
+            }
+        </script>
     </div>
 
 </main>

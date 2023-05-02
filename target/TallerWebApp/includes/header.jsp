@@ -107,7 +107,7 @@
         <li class="nav-item"><a href="index.jsp" class="nav-link active" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Sobre nosotros</a></li>
         <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="log-in.jsp" class="nav-link">Log in</a></li>
+        <li class="nav-item"><a href="profile.jsp" class="nav-link">Mi perfil</a></li>
       </ul>
     </header>
   </div>
