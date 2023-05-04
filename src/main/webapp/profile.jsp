@@ -3,24 +3,32 @@
 <%@include file="includes/header.jsp"%>
 
 <body>
-    <form id="myForm">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name"><br><br>
+<div style="display: flex; justify-content: center; align-items: center;">
+    <form id="myForm" style="text-align: center; background: rgb(212,198,151); background: linear-gradient(90deg, rgba(212,198,151,1) 4%, rgba(233,233,226,1) 50%, rgba(220,219,237,1) 100%); width: 500px;">
+      <label for="name"><b>Nombre:</b></label>
+      <input type="text" id="name" name="name" style="margin: 10px;"><br><br>
 
-      <label for="surname">Apellidos:</label>
-      <input type="text" id="surname" name="surname"><br><br>
+      <label for="surname"><b>Apellidos:</b></label>
+      <input type="text" id="surname" name="surname" style="margin: 10px;"><br><br>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br><br>
+      <label for="email"><b>Email:</b></label>
+      <input type="email" id="email" name="email" style="margin: 10px;"><br><br>
 
-      <label for="puesto">Puesto:</label>
-      <input type="text" id="puesto" name="puesto"><br><br>
+      <label for="puesto"><b>Puesto:</b></label>
+      <input type="text" id="puesto" name="puesto" style="margin: 10px;"><br><br>
 
-      <label for="phone">Teléfono:</label>
-      <input type="text" id="phone" name="phone"><br><br>
+      <label for="direction"><b>Dirección:</b></label>
+      <input type="text" id="direction" name="direction" style="margin: 10px;"><br><br>
 
-      <button type="submit">Guardar</button>
+      <label for="city"><b>Ciudad:</b></label>
+      <input type="text" id="city" name="city" style="margin: 10px;"><br><br>
+
+      <label for="phone"><b>Teléfono:</b></label>
+      <input type="text" id="phone" name="phone" style="margin: 10px;"><br><br>
+
+      <button type="submit" style="margin: 10px;">Guardar</button>
     </form>
+</div>
 </body>
 
 <script type="text/javascript">
@@ -29,6 +37,8 @@
     const surnameInput = document.getElementById("surname");
     const emailInput = document.getElementById("email");
     const puestoInput = document.getElementById("puesto");
+    const directionInput = document.getElementById("direction");
+    const cityInput = document.getElementById("city");
     const phoneInput = document.getElementById("phone");
 
     if(localStorage.getItem("name")) {
@@ -43,6 +53,12 @@
     if(localStorage.getItem("puesto")) {
       puestoInput.value = localStorage.getItem("puesto");
     }
+    if(localStorage.getItem("direction")) {
+      directionInput.value = localStorage.getItem("direction");
+    }
+    if(localStorage.getItem("city")) {
+      cityInput.value = localStorage.getItem("city");
+    }
     if(localStorage.getItem("phone")) {
       phoneInput.value = localStorage.getItem("phone");
     }
@@ -54,12 +70,16 @@
       const surname = surnameInput.value;
       const email = emailInput.value;
       const puesto = puestoInput.value;
+      const direction = directionInput.value;
+      const city = cityInput.value;
       const phone = phoneInput.value;
 
       localStorage.setItem("name", name);
       localStorage.setItem("surname", surname);
       localStorage.setItem("email", email);
       localStorage.setItem("puesto", puesto);
+      localStorage.setItem("direction", direction);
+      localStorage.setItem("city", city);
       localStorage.setItem("phone", phone);
 
       alert("Datos guardados correctamente");
